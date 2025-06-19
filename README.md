@@ -1,8 +1,8 @@
 🔒 Detecção de Intrusos com IA e Alarme Sonoro
-Este projeto utiliza Visão Computacional e Inteligência Artificial (IA) para detectar pessoas em tempo real em uma área específica de vigilância. Caso uma pessoa seja identificada dentro da área definida, um alarme sonoro é disparado automaticamente. A detecção é realizada utilizando o modelo YOLOv8n (You Only Look Once), uma das arquiteturas mais rápidas e eficientes para detecção de objetos.
+Este projeto utiliza Visão Computacional e Inteligência Artificial (IA) para detectar pessoas em tempo real em uma área específica de vigilância. Caso uma pessoa seja identificada dentro da área definida. A detecção é realizada utilizando o modelo YOLOv8n (You Only Look Once), uma das arquiteturas mais rápidas e eficientes para detecção de objetos.
 
 📸 Demonstração
-A imagem e os vídeos incluídos mostram o funcionamento do sistema em ação, onde uma pessoa entrando na área restrita dispara o alerta visual e sonoro.
+A imagem e os vídeos incluídos mostram o funcionamento do sistema em ação, onde uma pessoa entrando na área restrita dispara o alerta visual.
 
 🧠 Tecnologias Utilizadas
 Python — linguagem de programação principal.
@@ -11,15 +11,10 @@ OpenCV — captura e manipulação de vídeo e imagens.
 
 YOLOv8 (Ultralytics) — modelo de IA para detecção de objetos.
 
-winsound — biblioteca do Windows para emitir sons no alarme.
-
-Threading — para disparar o alarme sonoro sem travar o loop principal de detecção.
-
 🛠️ Instalação e Execução
 Pré-requisitos
 Python 3.8+
 
-Windows (por conta do winsound, que é exclusivo do Windows)
 
 Instale as dependências:
 bash
@@ -33,6 +28,7 @@ bash
 Copiar
 Editar
 python main.py
+
 📂 Estrutura do Projeto
 bash
 Copiar
@@ -41,6 +37,7 @@ Editar
 ├── yolov8n.pt          # Modelo pré-treinado YOLOv8n
 ├── ex02.mp4            # Vídeo de entrada (câmera simulada)
 ├── img01.png           # Imagem de exemplo de detecção
+
 🤖 Técnica de IA Utilizada
 YOLOv8 - You Only Look Once
 YOLOv8 é uma arquitetura de detecção de objetos baseada em deep learning, projetada para identificar múltiplos objetos em uma imagem com alta velocidade e precisão. No projeto:
@@ -62,7 +59,6 @@ Se o centro de uma pessoa detectada estiver dentro dessa área, o sistema:
 
 Mostra alerta visual na tela.
 
-Dispara alarme sonoro usando a função winsound.Beep.
 
 🔔 Funcionalidades
 Detecção em tempo real de pessoas.
@@ -70,7 +66,3 @@ Detecção em tempo real de pessoas.
 Definição de uma zona sensível.
 
 Alerta visual (overlay vermelho + mensagem).
-
-Alerta sonoro por thread paralela.
-
-Uso de modelo leve para rápida resposta.
